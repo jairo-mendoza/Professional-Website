@@ -1,78 +1,108 @@
-/* This css file is used for styles that are shared on multiple pages */
-/* Styling for desktops, laptops, or any device in portrait mode */
-@media screen and (max-width: 5000px) {
-    /* Styling for navbar */
-    .navbar {
-        overflow: hidden;
-        display: flex;
-        height: 20%;
-    }
+/*
+   One stylesheet: design tokens, base reset/typography, then one block per
+   section. Light theme is the default; [data-theme="dark"] swaps the tokens.
+  */
 
-    .nav-links {
-        margin-top: -15px;
-    }
+/* --- Design tokens: light (default) -------------------------------------- */
+:root {
+    --bg: #f4f1ea;
+    --surface: #fbfaf6;
+    --ink: #1b1a16;
+    --muted: #54524b;
+    --faint: #8a8678;
+    --line: rgba(27, 26, 22, 0.08);
+    --line2: rgba(27, 26, 22, 0.14);
+    --stripe: rgba(27, 26, 22, 0.05);
+    --soft: #e7e2d5;
+    --photo: #eae6db;
+    --matcha: #7ca64d; /* yummers */
+    --matcha-ink: #5e8a38;
+    --orange: #e27a3f;
+    --chip-green: #eef3e4;
+    --chip-orange: #fbebe0;
+    --time-dim: #cbd9b4;
+    --footer-bg: #1b1a16;
+    --footer-ink: #f4f1ea;
 
-    .navbar p {
-        color: #AA4465;
-        font-size: 30px;
-        justify-content: start;
-    }
+    /* fixed accents used inside both themes */
+    --fact-tint-green: rgba(124, 166, 77, 0.06);
+    --fact-tint-orange: rgba(226, 122, 63, 0.06);
+    --hl-green: rgba(124, 166, 77, 0.5);
 
-    .navbar a {
-        color: #ECECEC;
-        text-decoration: none;
-        font-size: 20px;
-        justify-content: end;
-        margin-left: 20px;
-    }
+    --font-serif: "Bitter", Georgia, serif;
+    --font-sans: "Hanken Grotesk", system-ui, sans-serif;
+    --font-script: "Caveat", cursive;
+    --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
 }
 
-/* Styling for phones or devices in portrait mode */
-@media screen and (max-width: 600px) {
-    /* Styling for navbar */
-    .navbar {
-        display: flex;
-        height: 20%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav-links {
-        margin-top: -15px;
-        margin-left: -15px;
-    }
-
-    .navbar p {
-        color: #AA4465;
-        font-size: 25px;
-        text-align: center;
-    }
-
-    .navbar a {
-        color: #ECECEC;
-        text-decoration: none;
-        font-size: 15px;
-        margin-top: -20px;
-    }
+/* --- Design tokens: dark -------------------------------------------------- */
+[data-theme="dark"] {
+    --bg: #13130e;
+    --surface: #1c1c15;
+    --ink: #ece9e0;
+    --muted: rgba(236, 233, 224, 0.62);
+    --faint: rgba(236, 233, 224, 0.45);
+    --line: rgba(236, 233, 224, 0.12);
+    --line2: rgba(236, 233, 224, 0.16);
+    --stripe: rgba(236, 233, 224, 0.06);
+    --soft: #26261d;
+    --photo: #26261d;
+    --matcha: #7ca64d; /* mmm mmmmmmmmm */
+    --matcha-ink: #9ec97a;
+    --orange: #e8915c;
+    --chip-green: rgba(124, 166, 77, 0.2);
+    --chip-orange: rgba(232, 145, 92, 0.2);
+    --time-dim: rgba(124, 166, 77, 0.4);
+    --footer-bg: #0c0c09;
+    --footer-ink: #ece9e0;
+    --hl-green: rgba(124, 166, 77, 0.45);
 }
 
-/* Styling for body of webpage */
+/* --- Base reset / typography --------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #1E212B;
-    margin: 0px;
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-/* Styling for fonts */
-a, p, span {
-    font-family: 'Quicksand', sans-serif;
-    letter-spacing: 2.5px;
-    text-decoration: none;
+h1,
+h2,
+h3,
+p {
+    margin: 0;
 }
 
-div .active {
-    color: #AA4465;
+a {
+    color: inherit;
 }
 
-a:hover {
-    color: #AA4465;
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Green highlighter marker behind key words in headings */
+.mark {
+    background: linear-gradient(transparent 58%, var(--hl-green) 58%);
+    padding: 0 2px;
+}
+
+/* --- Page container ------------------------------------------------------- */
+.page {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: var(--bg);
 }

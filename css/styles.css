@@ -28,6 +28,11 @@
     --fact-tint-green: rgba(124, 166, 77, 0.06);
     --fact-tint-orange: rgba(226, 122, 63, 0.06);
     --hl-green: rgba(124, 166, 77, 0.5);
+    --photo-card: #fbfaf6;
+    --photo-fill: #eae6db;
+    --photo-line: rgba(27, 26, 22, 0.08);
+    --photo-stripe: rgba(27, 26, 22, 0.05);
+    --photo-faint: #8a8678;
 
     --font-serif: "Bitter", Georgia, serif;
     --font-sans: "Hanken Grotesk", system-ui, sans-serif;
@@ -162,4 +167,159 @@ img {
 .nav__toggle:hover {
     border-color: var(--orange);
     color: var(--orange);
+}
+
+/* --- Icons (recolored SVG masks) ----------------------------------------- */
+.icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: currentColor;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.icon--github {
+    -webkit-mask-image: url(../img/icons/github.svg);
+    mask-image: url(../img/icons/github.svg);
+}
+
+.icon--linkedin {
+    -webkit-mask-image: url(../img/icons/linkedin.svg);
+    mask-image: url(../img/icons/linkedin.svg);
+}
+
+.icon--mail {
+    -webkit-mask-image: url(../img/icons/mail.svg);
+    mask-image: url(../img/icons/mail.svg);
+}
+
+/* --- Social row ----------------------------------------------------------- */
+.social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.social__link {
+    display: flex;
+    color: var(--ink);
+    transition: color 0.15s ease;
+}
+
+.social__link--github:hover,
+.social__link--linkedin:hover {
+    color: var(--matcha);
+}
+
+.social__link--mail:hover {
+    color: var(--orange);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    padding: 78px 64px 70px;
+    align-items: center;
+}
+
+.hero__eyebrow {
+    display: inline-block;
+    font-family: var(--font-script);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--orange);
+    transform: rotate(-2deg);
+}
+
+.hero__title {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 74px;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-top: 14px;
+}
+
+.hero__lede {
+    font-size: 18.5px;
+    line-height: 1.64;
+    color: var(--muted);
+    max-width: 540px;
+    margin-top: 26px;
+}
+
+.hero__media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Photo placeholder card */
+.photo {
+    margin: 0;
+    background: var(--photo-card);
+    padding: 14px 14px 0;
+    border-radius: 6px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+    transform: rotate(-2.5deg);
+}
+
+.photo__frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    aspect-ratio: 4 / 5;
+    border-radius: 3px;
+    border: 1px solid var(--photo-line);
+    background-color: var(--photo-fill);
+    background-image: repeating-linear-gradient(
+        135deg,
+        var(--photo-stripe) 0 13px,
+        transparent 13px 26px
+    );
+}
+
+.photo__tag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--photo-faint);
+}
+
+.photo__caption {
+    font-size: 13px;
+    font-style: italic;
+    color: #6e6b61;
+    text-align: center;
+    padding: 12px 0 16px;
+}
+
+/* Decorative glyphs floating around the photo */
+.hero__glyph {
+    position: absolute;
+    line-height: 1;
+}
+
+.hero__glyph--star {
+    top: -10px;
+    left: -6px;
+    font-size: 30px;
+    color: var(--orange);
+    transform: rotate(-12deg);
+}
+
+.hero__glyph--moon {
+    bottom: 24px;
+    right: -4px;
+    font-size: 24px;
+    color: var(--matcha);
 }

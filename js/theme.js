@@ -15,7 +15,7 @@
 
         var btn = document.querySelector("[data-theme-toggle]");
         if (btn) {
-            btn.textContent = theme === "dark" ? "☀" : "☾"; // ☀ / ☾
+            btn.textContent = theme === "dark" ? "☀︎" : "☾︎"; // ☀ / ☾
             btn.setAttribute(
                 "aria-label",
                 theme === "dark"

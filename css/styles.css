@@ -547,3 +547,119 @@ img {
     letter-spacing: 0.04em;
     color: var(--faint);
 }
+
+/* --- Timeline (03) -------------------------------------------------------- */
+.timeline {
+    padding: 50px 64px 40px;
+}
+
+.timeline .section__head {
+    margin-bottom: 36px;
+}
+
+.timeline__track {
+    position: relative;
+    padding-left: 34px;
+}
+
+.timeline__track::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(var(--matcha), rgba(124, 166, 77, 0.2));
+}
+
+.timeline__entry {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline__entry:last-child {
+    margin-bottom: 0;
+}
+
+.timeline__dot {
+    position: absolute;
+    left: -34px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    border: 3px solid var(--bg);
+    background: var(--matcha);
+}
+
+.timeline__entry--now .timeline__dot {
+    background: var(--orange);
+    box-shadow: 0 0 0 2px var(--orange);
+}
+
+.timeline__entry--dim .timeline__dot {
+    background: var(--time-dim);
+}
+
+.timeline__row {
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+}
+
+.timeline__year {
+    min-width: 54px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--matcha-ink);
+}
+
+.timeline__entry--now .timeline__year {
+    color: var(--orange);
+}
+
+.timeline__entry--dim .timeline__year {
+    color: var(--faint);
+}
+
+.timeline__role {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.timeline__entry--dim .timeline__role {
+    color: var(--muted);
+}
+
+.timeline__muted {
+    color: var(--muted);
+}
+
+.timeline__body {
+    max-width: 620px;
+    margin-top: 7px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+}
+
+.resume-link {
+    display: inline-block;
+    margin-top: 32px;
+    margin-left: 34px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--matcha-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--matcha);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.resume-link:hover {
+    color: var(--orange);
+    text-decoration-color: var(--orange);
+}

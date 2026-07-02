@@ -663,3 +663,93 @@ img {
     color: var(--orange);
     text-decoration-color: var(--orange);
 }
+
+/* --- Footer / contact ----------------------------------------------------- */
+.footer {
+    margin-top: 24px;
+    padding: 70px 64px 38px;
+    background: var(--footer-bg);
+    color: var(--footer-ink);
+}
+
+.footer__title {
+    max-width: 760px;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 58px;
+    letter-spacing: -0.02em;
+    line-height: 1.04;
+}
+
+/* footer highlight marker is a touch stronger than the in-page one */
+.footer .mark {
+    background: linear-gradient(transparent 58%, rgba(124, 166, 77, 0.55) 58%);
+    padding: 0 4px;
+}
+
+.footer__text {
+    max-width: 520px;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(244, 241, 234, 0.66);
+}
+
+.footer__contact {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+}
+
+.footer__email {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--footer-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+    transition: color 0.15s ease;
+}
+
+.footer__email:hover {
+    color: #9ec97a;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-left: 24px;
+    border-left: 1px solid rgba(244, 241, 234, 0.18);
+}
+
+.footer__icon {
+    display: flex;
+    color: var(--footer-ink);
+    transition: color 0.15s ease;
+}
+
+.footer__icon .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer__icon--github:hover,
+.footer__icon--linkedin:hover {
+    color: var(--matcha);
+}
+
+.footer__icon--mail:hover {
+    color: var(--orange);
+}
+
+.footer__copy {
+    margin-top: 50px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(244, 241, 234, 0.14);
+    font-size: 14px;
+    color: rgba(244, 241, 234, 0.55);
+}

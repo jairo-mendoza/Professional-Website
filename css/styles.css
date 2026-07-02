@@ -12,9 +12,6 @@
     --faint: #8a8678;
     --line: rgba(27, 26, 22, 0.08);
     --line2: rgba(27, 26, 22, 0.14);
-    --stripe: rgba(27, 26, 22, 0.05);
-    --soft: #e7e2d5;
-    --photo: #eae6db;
     --matcha: #7ca64d; /* yummers */
     --matcha-ink: #5e8a38;
     --orange: #e27a3f;
@@ -32,7 +29,6 @@
     --photo-fill: #eae6db;
     --photo-line: rgba(27, 26, 22, 0.08);
     --photo-stripe: rgba(27, 26, 22, 0.05);
-    --photo-faint: #8a8678;
 
     --font-serif: "Bitter", Georgia, serif;
     --font-sans: "Hanken Grotesk", system-ui, sans-serif;
@@ -49,9 +45,6 @@
     --faint: rgba(236, 233, 224, 0.45);
     --line: rgba(236, 233, 224, 0.12);
     --line2: rgba(236, 233, 224, 0.16);
-    --stripe: rgba(236, 233, 224, 0.06);
-    --soft: #26261d;
-    --photo: #26261d;
     --matcha: #7ca64d; /* mmm mmmmmmmmm */
     --matcha-ink: #9ec97a;
     --orange: #e8915c;
@@ -288,13 +281,6 @@ img {
         var(--photo-stripe) 0 13px,
         transparent 13px 26px
     );
-}
-
-.photo__tag {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--photo-faint);
 }
 
 .photo__img {

@@ -323,3 +323,88 @@ img {
     font-size: 24px;
     color: var(--matcha);
 }
+
+/* --- Section header (shared: facts / projects / timeline) ----------------- */
+.section__head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.section__num {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--orange);
+}
+
+.section__title {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 44px;
+    letter-spacing: -0.02em;
+}
+
+/* --- Fast facts (01) ------------------------------------------------------ */
+.facts {
+    padding: 30px 64px;
+}
+
+.facts .section__head {
+    margin-bottom: 30px;
+}
+
+.facts__list {
+    margin: 0;
+    border-top: 1px solid var(--line2);
+}
+
+.fact {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    align-items: baseline;
+    padding: 26px 4px;
+    border-bottom: 1px solid var(--line2);
+    transition: background 0.15s ease;
+}
+
+.fact--green:hover {
+    background: var(--fact-tint-green);
+}
+
+.fact--orange:hover {
+    background: var(--fact-tint-orange);
+}
+
+.fact__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.fact--green .fact__label {
+    color: var(--matcha-ink);
+}
+
+.fact--orange .fact__label {
+    color: var(--orange);
+}
+
+.fact__glyph {
+    font-size: 15px;
+}
+
+.fact__value {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.32;
+    color: var(--ink);
+}

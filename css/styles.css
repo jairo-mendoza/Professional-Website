@@ -161,7 +161,9 @@ img {
     line-height: 1;
     padding: 0;
     cursor: pointer;
-    transition: color 0.15s ease, border-color 0.15s ease;
+    transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
 }
 
 .nav__toggle:hover {
@@ -656,7 +658,9 @@ img {
     text-decoration-color: var(--matcha);
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
-    transition: color 0.15s ease, text-decoration-color 0.15s ease;
+    transition:
+        color 0.15s ease,
+        text-decoration-color 0.15s ease;
 }
 
 .resume-link:hover {
@@ -667,9 +671,14 @@ img {
 /* --- Footer / contact ----------------------------------------------------- */
 .footer {
     margin-top: 24px;
-    padding: 70px 64px 38px;
     background: var(--footer-bg);
     color: var(--footer-ink);
+}
+
+.footer__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 70px 64px 38px;
 }
 
 .footer__title {

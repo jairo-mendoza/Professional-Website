@@ -1,97 +1,437 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Jairo Mendoza</title>
         <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+            name="description"
+            content="Jairo Mendoza, a software engineer who builds across the whole stack: applied AI, Go services, React frontends, and telemetry pipelines."
         />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="HandheldFriendly" content="true" />
 
-        <title>Jairo Mendoza | Home</title>
+        <script>
+            (function () {
+                try {
+                    var saved = localStorage.getItem("theme");
+                    var theme =
+                        saved ||
+                        (window.matchMedia("(prefers-color-scheme: dark)")
+                            .matches
+                            ? "dark"
+                            : "light");
+                    document.documentElement.setAttribute("data-theme", theme);
+                } catch (e) {}
+            })();
+        </script>
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap"
             rel="stylesheet"
         />
 
-        <!-- Linked libraries -->
-        <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-            crossorigin="anonymous"
-        />
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"
-        ></script>
-        <!-- Icon library -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-
-        <!-- External Files -->
-        <link rel="stylesheet" href="./css/index.css" />
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
-        <!-- Navbar -->
-        <div class="navbar">
-            <p>JAIRO MENDOZA</p>
-            <div class="nav-links">
-                <a class="active" href="#">Home</a>
-                <!-- Will activate once I resture the page!
-                <a href="./html/projects.html">Projects</a>
-                -->
-                <a href="./html/resume.html">Resume</a>
+        <div class="page" id="top">
+            <!-- Navigation -->
+            <nav class="nav">
+                <a class="nav__brand" href="#top">Jairo Mendoza</a>
+                <div class="nav__right">
+                    <a class="nav__link" href="#about">about</a>
+                    <a class="nav__link" href="#work">work</a>
+                    <a class="nav__link" href="#resume">résumé</a>
+                    <button
+                        class="nav__toggle"
+                        type="button"
+                        data-theme-toggle
+                        aria-label="Switch to dark mode"
+                    >
+                        ☾
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Hero -->
+            <header class="hero">
+                <div class="hero__intro">
+                    <p class="hero__eyebrow">hey there ☺</p>
+                    <h1 class="hero__title">
+                        I&rsquo;m Jairo, a software engineer who builds across
+                        the
+                        <span class="mark">whole stack</span>.
+                    </h1>
+                    <p class="hero__lede">
+                        Currently at Honeycomb, building AI-powered features for
+                        an observability platform. I work across the stack: Go
+                        services, React frontends, telemetry pipelines, and the
+                        agent systems tying them together. I started in
+                        front-end; I stayed for the hard problems everywhere
+                        else.
+                    </p>
+                    <div class="social">
+                        <a
+                            class="social__link social__link--github"
+                            href="https://github.com/jairo-mendoza"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="GitHub"
+                        >
+                            <span class="icon icon--github"></span>
+                        </a>
+                        <a
+                            class="social__link social__link--linkedin"
+                            href="https://www.linkedin.com/in/jairo-mendoza/"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="LinkedIn"
+                        >
+                            <span class="icon icon--linkedin"></span>
+                        </a>
+                        <a
+                            class="social__link social__link--mail"
+                            href="mailto:jairomendoza.cs@gmail.com"
+                            aria-label="Email"
+                        >
+                            <span class="icon icon--mail"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__media">
+                    <figure class="photo">
+                        <div class="photo__frame">
+                            <img
+                                class="photo__img"
+                                src="./img/Self/jairo_headshot.jpg"
+                                alt="Jairo Mendoza, a portrait taken at night under string lights"
+                            />
+                        </div>
+                        <figcaption class="photo__caption">
+                            me, probably chasing dark skies ☀
+                        </figcaption>
+                    </figure>
+                    <span
+                        class="hero__glyph hero__glyph--star"
+                        aria-hidden="true"
+                        >✶</span
+                    >
+                    <span
+                        class="hero__glyph hero__glyph--moon"
+                        aria-hidden="true"
+                        >☾</span
+                    >
+                </div>
+            </header>
+
+            <!-- Fast facts (01) -->
+            <section class="facts" id="about">
+                <div class="section__head">
+                    <span class="section__num">01</span>
+                    <h2 class="section__title">a few things about me</h2>
+                </div>
+                <dl class="facts__list">
+                    <div class="fact fact--green">
+                        <dt class="fact__label">
+                            <span class="fact__glyph" aria-hidden="true">◆</span
+                            >background
+                        </dt>
+                        <dd class="fact__value">
+                            Software engineer at Honeycomb, and a Computer
+                            Science grad from CSU Dominguez Hills.
+                        </dd>
+                    </div>
+                    <div class="fact fact--orange">
+                        <dt class="fact__label">
+                            <span class="fact__glyph" aria-hidden="true">◐</span
+                            >what I build
+                        </dt>
+                        <dd class="fact__value">
+                            Applied AI and full-stack work: Go, TypeScript,
+                            Python, and telemetry pipelines.
+                        </dd>
+                    </div>
+                    <div class="fact fact--green">
+                        <dt class="fact__label">
+                            <span class="fact__glyph" aria-hidden="true">☾</span
+                            >after dark
+                        </dt>
+                        <dd class="fact__value">
+                            Stargazing and amateur astrophotography. The darker
+                            the sky, the better.
+                        </dd>
+                    </div>
+                    <div class="fact fact--orange">
+                        <dt class="fact__label">
+                            <span class="fact__glyph" aria-hidden="true"
+                                >⛰</span
+                            >movement
+                        </dt>
+                        <dd class="fact__value">
+                            Hiking, bouldering, and strength training to stay
+                            sane.
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+
+            <!-- Projects (02) -->
+            <section class="projects" id="work">
+                <div class="section__head">
+                    <span class="section__num">02</span>
+                    <h2 class="section__title">stuff I&rsquo;ve made</h2>
+                </div>
+                <div class="projects__grid">
+                    <article class="card">
+                        <a
+                            class="card__media"
+                            href="https://pokedex.jairom.com"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <img
+                                class="card__img"
+                                src="./img/projects/pokedex.png"
+                                alt="The PokéDex web app: a grid of Generation-1 Pokémon on type-colored tiles"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="card__body">
+                            <h3 class="card__title">
+                                <a
+                                    href="https://pokedex.jairom.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >Pokédex</a
+                                >
+                            </h3>
+                            <p class="card__desc">
+                                A Generation-1 Pokédex built with React and
+                                TypeScript, pulling live data from the PokéAPI.
+                                A fun playground for practicing component design
+                                and clean UI.
+                            </p>
+                            <div class="card__meta">
+                                <div class="pills">
+                                    <span class="pill pill--green">React</span>
+                                    <span class="pill pill--green"
+                                        >TypeScript</span
+                                    >
+                                    <span class="pill pill--orange"
+                                        >Side project</span
+                                    >
+                                </div>
+                                <a
+                                    class="card__repo"
+                                    href="https://github.com/jairo-mendoza/PokeDex"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Pokédex source on GitHub"
+                                >
+                                    <span
+                                        class="icon icon--github"
+                                        aria-hidden="true"
+                                    ></span>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="card card--soon" aria-hidden="true">
+                        <span class="card__soon">more coming soon ✶</span>
+                    </div>
+                    <div class="card card--soon" aria-hidden="true">
+                        <span class="card__soon">more coming soon ☾</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline (03) -->
+            <section class="timeline" id="resume">
+                <div class="section__head">
+                    <span class="section__num">03</span>
+                    <h2 class="section__title">how I got here</h2>
+                </div>
+                <div class="timeline__track">
+                    <div class="timeline__entry timeline__entry--now">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <div class="timeline__row">
+                            <span class="timeline__year">now</span>
+                            <div class="timeline__content">
+                                <h3 class="timeline__role">
+                                    Software Engineer &middot;
+                                    <span class="timeline__muted"
+                                        >Honeycomb</span
+                                    >
+                                </h3>
+                                <p class="timeline__body">
+                                    Came back full-time after interning here in
+                                    2022. These days I ship features end to end
+                                    and keep taking on more of the stack:
+                                    backend, data, and the AI layer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__entry">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <div class="timeline__row">
+                            <span class="timeline__year">2024</span>
+                            <div class="timeline__content">
+                                <h3 class="timeline__role">
+                                    B.S. Computer Science &middot;
+                                    <span class="timeline__muted"
+                                        >CSU Dominguez Hills</span
+                                    >
+                                    🎓
+                                </h3>
+                                <p class="timeline__body">
+                                    Graduated in May with a 3.92 GPA, focused on
+                                    software engineering and how people actually
+                                    use what we build.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__entry">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <div class="timeline__row">
+                            <span class="timeline__year">2023</span>
+                            <div class="timeline__content">
+                                <h3 class="timeline__role">
+                                    Software Development Engineer Intern
+                                    &middot;
+                                    <span class="timeline__muted">Amazon</span>
+                                </h3>
+                                <p class="timeline__body">
+                                    A summer in Seattle building a full-stack
+                                    app to visualize engagement metrics for 60+
+                                    internal teams, with React, Java, and AWS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__entry">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <div class="timeline__row">
+                            <span class="timeline__year">2022</span>
+                            <div class="timeline__content">
+                                <h3 class="timeline__role">
+                                    Software Engineer Intern &middot;
+                                    <span class="timeline__muted"
+                                        >Honeycomb</span
+                                    >
+                                </h3>
+                                <p class="timeline__body">
+                                    My first taste of Honeycomb: a remote
+                                    internship on the front-end, shipping UX
+                                    improvements and new features with React,
+                                    TypeScript, and Go.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__entry">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <div class="timeline__row">
+                            <span class="timeline__year">2021</span>
+                            <div class="timeline__content">
+                                <h3 class="timeline__role">
+                                    Technology Intern &middot;
+                                    <span class="timeline__muted">Prodege</span>
+                                </h3>
+                                <p class="timeline__body">
+                                    Built a video-editing app prototype in
+                                    Android Studio (record, clip, effects, and
+                                    music) to test features for a production
+                                    app.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__entry timeline__entry--dim">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <div class="timeline__row">
+                            <span class="timeline__year">2020</span>
+                            <div class="timeline__content">
+                                <h3 class="timeline__role">where it started</h3>
+                                <p class="timeline__body">
+                                    Enrolled at CSU Dominguez Hills to study
+                                    Computer Science. Late-night side projects
+                                    and a first taste of building for the web
+                                    that never wore off.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a
+                    class="resume-link"
+                    href="./resume/pdf/jairo_mendoza_resume.pdf"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View full résumé (PDF) &rarr;
+                </a>
+            </section>
+        </div>
+
+        <!-- Footer / contact -->
+        <footer class="footer">
+            <div class="footer__inner">
+                <h2 class="footer__title">
+                    Let&rsquo;s <span class="mark">Connect</span>!
+                </h2>
+                <p class="footer__text">
+                    Working on something interesting, or just want to talk shop
+                    about AI, observability, or the night sky? Reach out.
+                </p>
+                <div class="footer__contact">
+                    <a
+                        class="footer__email"
+                        href="mailto:jairomendoza.cs@gmail.com"
+                    >
+                        jairomendoza.cs@gmail.com
+                    </a>
+                    <div class="footer__social">
+                        <a
+                            class="footer__icon footer__icon--github"
+                            href="https://github.com/jairo-mendoza"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="GitHub"
+                        >
+                            <span class="icon icon--github"></span>
+                        </a>
+                        <a
+                            class="footer__icon footer__icon--linkedin"
+                            href="https://www.linkedin.com/in/jairo-mendoza/"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="LinkedIn"
+                        >
+                            <span class="icon icon--linkedin"></span>
+                        </a>
+                        <a
+                            class="footer__icon footer__icon--mail"
+                            href="mailto:jairomendoza.cs@gmail.com"
+                            aria-label="Email"
+                        >
+                            <span class="icon icon--mail"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__copy">
+                    &copy; <span id="year">2026</span> Jairo Mendoza &middot;
+                    made with care in Los Angeles
+                </div>
             </div>
-        </div>
+        </footer>
 
-        <!-- Picture, in circle cutout -->
-        <img class="profPic" src="./img/Self/jairo_profPic.jpg" />
-
-        <!-- Info about me -->
-        <p class="infoHeader">A Little Bit About Myself</p>
-        <hr />
-        <div class="infoText">
-            <p>
-                > Junior Majoring in Computer Science at<br />
-                California State University,
-                <span style="color: #efba08">Dominguez Hills</span>
-            </p>
-            <p>> Aspiring Software Engineer</p>
-            <p>> I like to hike and do general calisthenics</p>
-        </div>
-
-        <!-- Links on where to find me! - Using the fontawesome library for icons -->
-        <p class="infoHeader">Find Me On</p>
-        <hr />
-        <div class="infoText">
-            <a href="https://github.com/jairo-mendoza" target="_blank">
-                <i class="fa fa-github"></i>
-            </a>
-            <a
-                href="https://www.linkedin.com/in/jairo-mendoza/"
-                target="_blank"
-            >
-                <i class="fa fa-linkedin"></i>
-            </a>
-        </div>
+        <script src="./js/theme.js"></script>
+        <script src="./js/year.js"></script>
     </body>
 </html>
